@@ -25,12 +25,6 @@ public class StyledString {
         return this;
     }
 
-    public StyledString nextLine(){
-        value.append("\n");
-
-        return this;
-    }
-
     public int getLength() {
         return length;
     }

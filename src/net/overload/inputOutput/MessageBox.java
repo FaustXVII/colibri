@@ -1,17 +1,14 @@
 package net.overload.inputOutput;
 
-import java.util.List;
+import java.util.Arrays;
 
-public class Box {
+public class MessageBox {
     TextInput input = new TextInput();
-    List<StyledString> lines;
 
-    public Box(final List<StyledString> messages) {
-        lines = messages;
-
+    public MessageBox(StyledString... lines) {
         StyledString ss = new StyledString();
         ss.red("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        lines.forEach(line -> ss.red("║").white(line.getValue()).red(filler(line) + "║\n"));
+        Arrays.asList(lines).forEach(line -> ss.red("║").white(line.getValue()).red(filler(line) + "║\n"));
         ss.red("╚══════════════════════════════════════════════════════════════════════════════╝\n");
         ss.white("> ");
 
