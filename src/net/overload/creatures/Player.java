@@ -3,7 +3,7 @@ package net.overload.creatures;
 import net.overload.inputOutput.TextInput;
 import net.overload.inputOutput.TextOutput;
 
-import static net.overload.commons.boxBottumBorder;
+import static net.overload.commons.boxBottomBorder;
 import static net.overload.commons.boxTopBorder;
 
 public class Player extends Creature {
@@ -39,7 +39,7 @@ public class Player extends Creature {
         output.displayTextOutputInnerBox("Age: " + getAge());
         output.displayTextOutputInnerBox("Gender: " + getGender().toString().toLowerCase());
         output.displayTextOutputInnerBox("Race: " + getCreatureType().toString().toLowerCase());
-        output.displayTextOutput(boxBottumBorder());
+        output.displayTextOutput(boxBottomBorder());
     }
 
 }

@@ -8,13 +8,13 @@ public class TextOutput {
     }
 
     public void displayTextOutputInnerBox(final String output) {
-        int numberOfEmptySpaces = 80;
+        int numberOfEmptySpaces = 80 - (2 + output.length());
         StringBuilder emptySpace = new StringBuilder();
         for (int i = 0; i < numberOfEmptySpaces; i++) {
             emptySpace.append(" ");
         }
 
-        displayTextOutput(redText("║ ") + output);
+        displayTextOutput(redText("║") + output + emptySpace + redText("║"));
     }
 
     public void displayTextOutputInline(final String output) {

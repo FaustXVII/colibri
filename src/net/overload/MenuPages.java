@@ -11,7 +11,7 @@ public class MenuPages {
         output.displayTextOutput("OverloadGames.net (c)");
         output.displayTextOutput("V0.0.1-a");
         output.displayTextOutput("Old scrolls, an Overload Story");
-        output.displayTextOutput("Watch out! Mimics!\n\n\n\n\n");
+        output.displayTextOutput("Watch out for Mimics!\n\n\n\n\n");
         output.displayTextOutput(redText( // http://patorjk.com/software/taag/#p=display&f=Bloody&t=Colibri
                 " ▒█████   ██▓    ▓█████▄      ██████  ▄████▄   ██▀███   ▒█████   ██▓     ██▓    \n" +
                         "▒██▒  ██▒▓██▒    ▒██▀ ██▌   ▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▒██▒  ██▒▓██▒    ▓██▒    \n" +
@@ -27,10 +27,11 @@ public class MenuPages {
 
     public void displayMainMenu(){
         output.displayTextOutput(boxTopBorder());
-        output.displayTextOutputInnerBox(underline("N") + "ew game");
-        output.displayTextOutputInnerBox(redText("Load game"));
+        output.displayTextOutputInnerBox("New game");
+        output.displayTextOutputInnerBox("Load game");
+        output.displayTextOutputInnerBox("Tutorial");
         output.displayTextOutputInnerBox("");
-        output.displayTextOutputInnerBox(blink("Quit game"));
-        output.displayTextOutput(boxBottumBorder());
+        output.displayTextOutputInnerBox("Quit game");
+        output.displayTextOutput(boxBottomBorder());
     }
 }
