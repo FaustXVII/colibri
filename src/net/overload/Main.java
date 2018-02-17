@@ -1,12 +1,14 @@
 package net.overload;
 
+import net.overload.creatures.Player;
+
 public class Main {
 
     public static void main(String[] args) {
-        TextInput input = new TextInput();
-        TextOutput output = new TextOutput();
+        new MenuPages().displayGameTitle();
+        new MenuPages().displayMainMenu();
 
-        output.displayTextOutput("Enter your name: ");
-        output.displayTextOutput("Hello " + input.fetchInput() + "!");
+        Player player = new Player();
+        player.createNewPlayer();
     }
 }

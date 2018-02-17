@@ -1,4 +1,4 @@
-package net.overload;
+package net.overload.creatures;
 
 public abstract class Creature {
     private String firstName;
