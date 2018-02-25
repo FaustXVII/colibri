@@ -12,7 +12,7 @@ public class MessageBox {
         ss.red("╚══════════════════════════════════════════════════════════════════════════════╝\n");
         ss.white("> ");
 
-        System.out.print(ss.getValue());
+        TextOutput.print(ss.getValue());
         input.fetchInput();
     }
 

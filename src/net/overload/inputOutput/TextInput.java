@@ -9,10 +9,6 @@ public class TextInput {
         return scanner.nextLine();
     }
 
-    public int fetchNumberInput(){
-        return scanner.nextInt();
-    }
-
     public boolean confirm() {
         switch (scanner.nextLine().toLowerCase()) {
             case "y":
