@@ -24,7 +24,8 @@ public class Main {
                 new StyledString().white("Load"),
                 new StyledString().white("Tutorial"),
                 new StyledString().white(""),
-                new StyledString().white("Quit")
+                new StyledString().white("Quit"),
+                new StyledString().interactive(new InteractiveObject("Sword", "S"))
         );
     }
 }
