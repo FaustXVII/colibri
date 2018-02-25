@@ -1,4 +1,8 @@
-package net.overload.inputOutput;
+package net.overload.inputOutput.hud;
+
+import net.overload.inputOutput.StyledString;
+import net.overload.inputOutput.commandLine.TextInput;
+import net.overload.inputOutput.commandLine.TextOutput;
 
 import java.util.Arrays;
 

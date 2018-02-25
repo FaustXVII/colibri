@@ -1,7 +1,7 @@
 package net.overload;
 
-import net.overload.inputOutput.Banner;
-import net.overload.inputOutput.MessageBox;
+import net.overload.inputOutput.hud.Banner;
+import net.overload.inputOutput.hud.MessageBox;
 import net.overload.inputOutput.StyledString;
 
 public class Main {

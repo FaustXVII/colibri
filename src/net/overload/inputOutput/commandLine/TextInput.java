@@ -1,4 +1,4 @@
-package net.overload.inputOutput;
+package net.overload.inputOutput.commandLine;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package net.overload.inputOutput;
+package net.overload.inputOutput.commandLine;
 
 public class TextOutput {
     public static void print(final String printMessage){

@@ -1,6 +1,7 @@
-package net.overload.inputOutput;
+package net.overload.inputOutput.hud;
 
 import net.overload.Commons;
+import net.overload.inputOutput.commandLine.TextOutput;
 
 public class Banner {
     public static void printBanner(){
