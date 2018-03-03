@@ -9,14 +9,14 @@ public class StyledString {
 
     public StyledString white(String input){
         length += input.length();
-        value.append(Commons.TEXT_NORMAL + input);
+        value.append(Commons.ANSI_NORMAL + input);
 
         return this;
     }
 
     public StyledString red(String input){
         length += input.length();
-        value.append(Commons.TEXT_COLOR_RED + input);
+        value.append(Commons.ANSI_COLOR_RED + input);
 
         return this;
     }
@@ -26,7 +26,7 @@ public class StyledString {
         length += objectName.length();
         final String hotKey = interactiveObject.getHotKey();
 
-        value.append(objectName.replace(hotKey, Commons.TEXT_UNDERLINE+ hotKey + Commons.TEXT_NORMAL));
+        value.append(objectName.replace(hotKey, Commons.TEXT_UNDERLINE+ hotKey + Commons.ANSI_NORMAL));
 
         return this;
     }

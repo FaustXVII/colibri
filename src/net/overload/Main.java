@@ -1,6 +1,5 @@
 package net.overload;
 
-import net.overload.inputOutput.commandLine.TextOutput;
 import net.overload.inputOutput.hud.Banner;
 import net.overload.inputOutput.hud.MessageBox;
 import net.overload.inputOutput.StyledString;
@@ -19,7 +18,6 @@ public class Main {
                 new StyledString().interactive(new InteractiveObject("Sword", "S"))
         );
 
-        TextOutput.clearConsole();
-        Banner.printBanner();
+        Banner.StartAnimatedBanner();
     }
 }
