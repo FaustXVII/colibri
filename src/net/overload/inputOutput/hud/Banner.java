@@ -83,8 +83,9 @@ public class Banner {
                 int i = 0;
                 while (true){
                     TimeUnit.SECONDS.sleep(1);
-                    TextOutput.print("\033[2J");// Clean terminal*
+                    TextOutput.print("\r");
                     TextOutput.print(Commons.ANSI_COLOR_RED + FRAMES[i++ % FRAMES.length]);
+                    TextOutput.print(Commons.ansiCursorUp(10));
                 }
             }
             catch (InterruptedException e) {

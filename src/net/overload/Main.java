@@ -7,7 +7,8 @@ import net.overload.inputOutput.StyledString;
 public class Main {
 
     public static void main(String[] args) {
-        Banner.printBanner();
+//        Banner.printBanner();
+        Banner.StartAnimatedBanner();
 
         new MessageBox(// write a generator example "Start\n<red>name</red>\n"+ sword +" more more"
                 new StyledString().white("Start"),
@@ -17,7 +18,5 @@ public class Main {
                 new StyledString().white("Quit"),
                 new StyledString().interactive(new InteractiveObject("Sword", "S"))
         );
-
-        Banner.StartAnimatedBanner();
     }
 }
