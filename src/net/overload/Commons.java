@@ -10,6 +10,8 @@ public class Commons {
     public static final String ANSI_SAVE_CURSOR_POSITION = "\033[s";
     public static final String ANSI_LOAD_CURSOR_POSITION = "\033[u";
 
+    public static final String REGEX_ANSI_ESCAPE_CODES = "\\033\\[[0-9;]*m";
+
     public static String ansiCursorUp(final int numberOfRows){
         return (numberOfRows > 0)? ("\033[" + numberOfRows + "A") : (ansiCursorDown(numberOfRows * -1));
     }
