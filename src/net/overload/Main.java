@@ -2,7 +2,6 @@ package net.overload;
 
 import net.overload.inputOutput.hud.Banner;
 import net.overload.inputOutput.hud.MessageBox;
-import net.overload.inputOutput.StyledString;
 
 public class Main {
 
@@ -10,12 +9,12 @@ public class Main {
         Banner.printBanner();
 
         new MessageBox(
-                new StyledString().white("Start\n")
-                .white("Load\n")
-                .white("Tutorial\n")
-                .white("\n")
-                .white("Quit\n")
-                .interactive(new InteractiveObject("Sword", "S"))
+                "Strat\n" +
+                        "Load\n" +
+                        "Tutorial\n" +
+                        "\n" +
+                        "Quit\n" +
+                        new InteractiveObject("Sword", "S").toString()
         );
     }
 }

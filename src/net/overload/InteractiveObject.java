@@ -14,11 +14,8 @@ public class InteractiveObject {
         this.hotKey = hotKey;
     }
 
-    public String getObjectName() {
-        return objectName;
-    }
-
-    public String getHotKey() {
-        return hotKey;
+    @Override
+    public String toString() {
+        return objectName.replace(hotKey, Commons.TEXT_UNDERLINE + hotKey + Commons.ANSI_NORMAL);
     }
 }
