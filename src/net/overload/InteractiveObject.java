@@ -1,6 +1,8 @@
 package net.overload;
 
-public class InteractiveObject {
+import net.overload.inputOutput.listener.Observer;
+
+public class InteractiveObject extends Observer{
     String objectName;
     String hotKey;
 
@@ -17,5 +19,10 @@ public class InteractiveObject {
     @Override
     public String toString() {
         return objectName.replace(hotKey, Commons.TEXT_UNDERLINE + hotKey + Commons.ANSI_NORMAL);
+    }
+
+    @Override
+    public void update(){
+        System.out.println("hello from sword");
     }
 }
