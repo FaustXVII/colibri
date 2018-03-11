@@ -1,17 +1,19 @@
 package net.overload;
 
-import net.overload.inputOutput.listener.Observer;
+import net.overload.inputOutput.UpdateEvent;
+import net.overload.inputOutput.listener.Listener;
 
-public class InteractiveObject extends Observer{
-    String objectName;
-    String hotKey;
+public class InteractiveObject implements Listener {
+    private final String objectName;
+    private final String hotKey;
+    private final UpdateEvent event;
 
 
-    public InteractiveObject(final String objectName, final String hotKey){
-        if (!objectName.contains(hotKey)){
+    public InteractiveObject(final String objectName, final String hotKey, final UpdateEvent event) {
+        if (!objectName.contains(hotKey)) {
             // throw new Error (Can not set hotKey, because object does not contain the pattern)
         }
-
+        this.event = event;
         this.objectName = objectName;
         this.hotKey = hotKey;
     }
@@ -22,7 +24,8 @@ public class InteractiveObject extends Observer{
     }
 
     @Override
-    public void update(){
-        System.out.println("hello from sword");
+    public void inputEvent(final String input) {
+        if (hotKey.toLowerCase().equals(input))
+            event.Update();
     }
 }

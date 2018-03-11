@@ -24,7 +24,7 @@ public class MessageBox {
         sb.append(Commons.ANSI_NORMAL + "> ");
 
         TextOutput.print(sb.toString());
-        input.fetchInput();
+        input.enterKey();
     }
 
     private String filler(final String line){
