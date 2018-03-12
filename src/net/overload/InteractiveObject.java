@@ -23,6 +23,10 @@ public class InteractiveObject implements Listener {
         return objectName.replace(hotKey, Commons.TEXT_UNDERLINE + hotKey + Commons.ANSI_NORMAL);
     }
 
+    public String toStringln(){
+        return toString() + "\n";
+    }
+
     @Override
     public void inputEvent(final String input) {
         if (hotKey.toLowerCase().equals(input))

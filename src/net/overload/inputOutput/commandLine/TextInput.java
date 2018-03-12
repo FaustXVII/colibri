@@ -1,5 +1,6 @@
 package net.overload.inputOutput.commandLine;
 
+import net.overload.Commons;
 import net.overload.inputOutput.listener.Listener;
 
 import java.util.ArrayList;
@@ -8,13 +9,19 @@ import java.util.Scanner;
 
 public class TextInput {
     private final Scanner scanner = new Scanner(System.in);
-    private List<Listener> listeners = new ArrayList<>();
+    private final List<Listener> listeners = new ArrayList<>();
 
     public void enterKey() {
-        listeners.forEach(l -> l.inputEvent(scanner.nextLine().toLowerCase()));
+        TextOutput.print(Commons.ANSI_NORMAL + "> ");
+        final String input = scanner.nextLine().toLowerCase();
+
+        if (!input.trim().isEmpty())
+            listeners.forEach(l -> l.inputEvent(input));
+        else
+            enterKey();
     }
 
-    public void addListener(final Listener listener){
+    public void addListener(final Listener listener) {
         listeners.add(listener);
     }
 
