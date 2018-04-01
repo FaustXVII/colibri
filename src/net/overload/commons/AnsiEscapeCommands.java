@@ -1,9 +1,9 @@
-package net.overload;
+package net.overload.commons;
 
-public class Commons {
+public class AnsiEscapeCommands {
     public static final String ANSI_NORMAL = "\033[0m";
     public static final String ANSI_COLOR_RED = "\033[38;5;1m";
-    public static final String TEXT_UNDERLINE = "\033[4m" ;
+    public static final String ANSI_UNDERLINE = "\033[4m" ;
     public static final String ANSI_CLS = "\u001b[2J";
     public static final String ANSI_HOME = "\u001b[H";
 

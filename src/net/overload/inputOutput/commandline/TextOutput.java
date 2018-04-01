@@ -1,6 +1,6 @@
-package net.overload.inputOutput.commandLine;
+package net.overload.inputOutput.commandline;
 
-import net.overload.Commons;
+import net.overload.commons.AnsiEscapeCommands;
 
 public class TextOutput {
     public static void print(final String printMessage) {
@@ -8,7 +8,7 @@ public class TextOutput {
     }
 
     public static void clearConsole() {
-        System.out.print(Commons.ANSI_CLS + Commons.ANSI_HOME);
+        System.out.print(AnsiEscapeCommands.ANSI_CLS + AnsiEscapeCommands.ANSI_HOME);
         System.out.flush();
     }
 }

@@ -1,7 +1,7 @@
 package net.overload;
 
-import net.overload.inputOutput.GameMenu;
-import net.overload.inputOutput.commandLine.TextOutput;
+import net.overload.menus.GameMenu;
+import net.overload.inputOutput.commandline.TextOutput;
 import net.overload.inputOutput.hud.Banner;
 
 public class Main {

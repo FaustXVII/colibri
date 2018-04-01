@@ -1,6 +1,7 @@
-package net.overload;
+package net.overload.domain;
 
-import net.overload.inputOutput.UpdateEvent;
+import net.overload.commons.AnsiEscapeCommands;
+import net.overload.inputOutput.listener.UpdateEvent;
 import net.overload.inputOutput.listener.Listener;
 
 public class InteractiveObject implements Listener {
@@ -20,7 +21,7 @@ public class InteractiveObject implements Listener {
 
     @Override
     public String toString() {
-        return objectName.replace(hotKey, Commons.TEXT_UNDERLINE + hotKey + Commons.ANSI_NORMAL);
+        return objectName.replace(hotKey, AnsiEscapeCommands.ANSI_UNDERLINE + hotKey + AnsiEscapeCommands.ANSI_NORMAL);
     }
 
     public String toStringln(){

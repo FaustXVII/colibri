@@ -1,6 +1,6 @@
-package net.overload.inputOutput.commandLine;
+package net.overload.inputOutput.commandline;
 
-import net.overload.Commons;
+import net.overload.commons.AnsiEscapeCommands;
 import net.overload.inputOutput.listener.Listener;
 
 import java.util.ArrayList;
@@ -37,6 +37,6 @@ public class TextInput {
     }
 
     private void commandLineCursor(){
-        TextOutput.print(Commons.ANSI_NORMAL + "> ");
+        TextOutput.print(AnsiEscapeCommands.ANSI_NORMAL + "> ");
     }
 }

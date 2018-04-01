@@ -1,6 +1,6 @@
-package net.overload.inputOutput;
+package net.overload.menus;
 
-import net.overload.inputOutput.commandLine.TextInput;
+import net.overload.inputOutput.commandline.TextInput;
 import net.overload.inputOutput.hud.MessageBox;
 
 public class QuitGame {

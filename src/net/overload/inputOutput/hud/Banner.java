@@ -1,7 +1,7 @@
 package net.overload.inputOutput.hud;
 
-import net.overload.Commons;
-import net.overload.inputOutput.commandLine.TextOutput;
+import net.overload.commons.AnsiEscapeCommands;
+import net.overload.inputOutput.commandline.TextOutput;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -72,7 +72,7 @@ public class Banner {
 
 
     public static void printBanner(){
-        TextOutput.print(Commons.ANSI_COLOR_RED + STATIC_BANNER + Commons.ANSI_NORMAL);
+        TextOutput.print(AnsiEscapeCommands.ANSI_COLOR_RED + STATIC_BANNER + AnsiEscapeCommands.ANSI_NORMAL);
     }
 
     public static void StartAnimatedBanner(){
@@ -84,8 +84,8 @@ public class Banner {
                 while (true){
                     TimeUnit.SECONDS.sleep(1);
                     TextOutput.print("\r");
-                    TextOutput.print(Commons.ANSI_COLOR_RED + FRAMES[i++ % FRAMES.length]);
-                    TextOutput.print(Commons.ansiCursorUp(10));
+                    TextOutput.print(AnsiEscapeCommands.ANSI_COLOR_RED + FRAMES[i++ % FRAMES.length]);
+                    TextOutput.print(AnsiEscapeCommands.ansiCursorUp(10));
                 }
             }
             catch (InterruptedException e) {

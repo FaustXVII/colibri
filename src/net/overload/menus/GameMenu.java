@@ -1,7 +1,7 @@
-package net.overload.inputOutput;
+package net.overload.menus;
 
-import net.overload.InteractiveObject;
-import net.overload.inputOutput.commandLine.TextInput;
+import net.overload.domain.InteractiveObject;
+import net.overload.inputOutput.commandline.TextInput;
 import net.overload.inputOutput.hud.MessageBox;
 
 public class GameMenu {
