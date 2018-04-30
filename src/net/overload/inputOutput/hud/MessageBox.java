@@ -15,15 +15,19 @@ public class MessageBox {
         Arrays.asList(lines).forEach(line -> messageInBox
                 .append(AnsiEscapeCommands.ANSI_COLOR_RED + "║")
                 .append(AnsiEscapeCommands.ANSI_NORMAL + line)
-                .append(AnsiEscapeCommands.ANSI_COLOR_RED + filler(line) + "║\n"));
+                .append(AnsiEscapeCommands.ANSI_COLOR_RED + appendWhiteSpace(line) + "║\n"));
         messageInBox.append(AnsiEscapeCommands.ANSI_COLOR_RED + "╚══════════════════════════════════════════════════════════════════════════════╝\n");
     }
 
     public void display(){
+        Banner banner = new Banner();
+
+        TextOutput.print(AnsiEscapeCommands.ANSI_CLS);
+        banner.printBanner();
         TextOutput.print(messageInBox.toString());
     }
 
-    private String filler(final String line){
+    private String appendWhiteSpace(final String line){
         int numberOfEmptySpaces = 80 - (2 + line.replaceAll(AnsiEscapeCommands.REGEX_ANSI_ESCAPE_CODES, "").length());
         StringBuilder emptySpace = new StringBuilder();
 
