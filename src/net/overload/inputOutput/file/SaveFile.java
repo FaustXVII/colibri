@@ -13,8 +13,8 @@ public class SaveFile {
     public void save() {
         try (PrintWriter printWriter = new PrintWriter(FILE_NAME)) {
             printWriter.print("Woop woop woop");
-        } catch (final FileNotFoundException exeption) {
-            throw new RuntimeException("Could not save, file not found: " + exeption);
+        } catch (final FileNotFoundException exception) {
+            throw new RuntimeException("Could not save, file not found: " + exception);
         }
     }
 
@@ -24,11 +24,19 @@ public class SaveFile {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String bob = bufferedReader.readLine();
             System.out.print(bob);
-        } catch (final FileNotFoundException exeption) {
-            throw new RuntimeException("Could not load, file not found: " + exeption);
 
-        } catch (final IOException exeption){
-            throw new RuntimeException("Could not load, I/O problem: " + exeption);
+        } catch (final FileNotFoundException exception) {
+            throw new RuntimeException("Could not load, file not found: " + exception);
+        } catch (final IOException exception) {
+            throw new RuntimeException("Could not load, I/O problem: " + exception);
         }
+    }
+
+    private void serialize() {
+
+    }
+
+    private void deserialize() {
+
     }
 }
