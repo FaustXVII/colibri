@@ -6,7 +6,7 @@ import net.overload.inputOutput.file.SaveFile;
 public class NewCharacter {
     public NewCharacter() {
         SaveFile saveFile = new SaveFile();
-        saveFile.save(new CharacterSheet());
-        saveFile.load();
+        saveFile.CharacterSheetToFile(new CharacterSheet());
+        saveFile.fileToCharacterSheet();
     }
 }
