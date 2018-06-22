@@ -1,6 +1,8 @@
 package net.overload.inputOutput.file;
 
 import net.overload.CharacterSheet;
+import net.overload.inputOutput.file.exceptions.LoadGameDataException;
+import net.overload.inputOutput.file.exceptions.SaveGameDataException;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
