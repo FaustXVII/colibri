@@ -15,8 +15,8 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Base64;
 
+@Deprecated
 public class SaveAndLoadCharacterSheet {
-    // ToDo Maak hier twee lossen classes van, load & save
     private static final String FILE_REFERENCE = "/temp/savefile.txt";
 
     public CharacterSheet laod() throws LoadGameDataException {

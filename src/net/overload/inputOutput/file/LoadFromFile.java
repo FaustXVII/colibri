@@ -1,7 +1,7 @@
 package net.overload.inputOutput.file;
 
 import net.overload.CharacterSheet;
-import net.overload.inputOutput.file.exceptions.SaveGameDataException;
+import net.overload.inputOutput.file.exceptions.LoadGameDataException;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -14,14 +14,14 @@ import java.util.Base64;
 public class LoadFromFile {
     private static final String FILE_NAME = "./savefile.txt";
 
-    public CharacterSheet loadCharacterSheet() throws SaveGameDataException {
+    public CharacterSheet loadCharacterSheet() throws LoadGameDataException {
         try {
             final String sheet = readFileIntoString();
             final CharacterSheet characterSheet = stringToCharacterSheet(sheet);
 
             return characterSheet;
         } catch (final IOException | ClassNotFoundException e) {
-            throw new SaveGameDataException(e.getMessage());
+            throw new LoadGameDataException(e.getMessage());
         }
     }
 
@@ -31,7 +31,6 @@ public class LoadFromFile {
 
         return sheet;
     }
-
 
     private CharacterSheet stringToCharacterSheet(final String serializedObject) throws IOException, ClassNotFoundException {
         byte b[] = Base64.getDecoder().decode(serializedObject);
